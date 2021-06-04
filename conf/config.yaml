@@ -1,0 +1,7 @@
+http_server:
+  listen: :8080
+  read_timeout: 30
+  write_timeout: 30
+  allow_ip: 
+    -"127.0.0.1"
+mode: debug
