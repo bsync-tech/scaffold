@@ -5,3 +5,4 @@ http_server:
   allow_ip: 
     -"127.0.0.1"
 mode: debug
+alarm_expired: 10m

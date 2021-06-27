@@ -1,5 +1,5 @@
 name: fapp
-mode: nlog
+mode: console
 level: debug
 file_path: "./log"
 file_max_size: 128

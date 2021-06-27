@@ -4,10 +4,8 @@ import (
 	"errors"
 	"fmt"
 	"net/http"
-	"runtime/debug"
 	"time"
 
-	"github.com/bsync-tech/mlog"
 	"github.com/bsync-tech/scaffold/config"
 	"github.com/gin-gonic/gin"
 	uuid "github.com/satori/go.uuid"
@@ -38,7 +36,7 @@ func RecoveryMiddleware() gin.HandlerFunc {
 		defer func() {
 			if err := recover(); err != nil {
 				//先做一下日志记录
-				mlog.Debug(string(debug.Stack()))
+				// mlog.Debug(string(debug.Stack()))
 				if config.C.GetString("mode") != "release" {
 					c.JSON(http.StatusInternalServerError, errors.New("内部错误"))
 					return

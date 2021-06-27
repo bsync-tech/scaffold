@@ -48,12 +48,13 @@ func HttpServerRun() {
 
 func InitRouter() *gin.Engine {
 	router := gin.New()
-	router.Use(RecoveryMiddleware(), RequestId(), GinLogger(mlog.GetLogger()))
+	router.Use(RequestId(), GinLogger(mlog.GetLogger()))
 	router.GET("/ping", func(c *gin.Context) {
 		c.JSON(200, gin.H{
 			"message": "pong",
 		})
 	})
+	router.POST("/logmessage", LogMessage)
 
 	return router
 }

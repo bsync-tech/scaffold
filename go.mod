@@ -9,6 +9,8 @@ require (
 	github.com/garyburd/redigo v1.6.2
 	github.com/gin-gonic/contrib v0.0.0-20201101042839-6a891bf89f19 // indirect
 	github.com/gin-gonic/gin v1.7.2
+	github.com/go-resty/resty/v2 v2.6.0
+	github.com/gookit/goutil v0.3.14
 	github.com/gorilla/sessions v1.2.1 // indirect
 	github.com/satori/go.uuid v1.2.0
 	github.com/spf13/viper v1.7.1

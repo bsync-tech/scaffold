@@ -16,9 +16,7 @@ func main() {
 	config.New(config.WithPath("conf/config.yaml"))
 	config.Initialize()
 
+	go server.ClearExpiredGoRoutine()
 	server.HttpServerRun()
-
-	// quit := make(chan os.Signal)
-	// signal.Notify(quit, syscall.SIGINT, syscall.SIGTERM)
-	// <-quit
+	server.Close()
 }
